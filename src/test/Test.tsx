@@ -1,8 +1,7 @@
-
 export const Test = () => {
-    return(
-        <>
-            <p>Testのコンポーネント</p>
-        </>
-    )
-}
+  return (
+    <>
+      <p>Testのコンポーネント</p>
+    </>
+  );
+};

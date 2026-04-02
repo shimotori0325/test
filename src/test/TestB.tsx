@@ -1,8 +1,11 @@
+import { useParams } from "react-router-dom";
 
 export const TestB = () => {
-    return(
-        <>
-            <p>TestBのコンポーネント</p>
-        </>
-    )
-}
+  const { id } = useParams();
+  return (
+    <>
+      <p>{id}</p>
+      <p>TestBのコンポーネント</p>
+    </>
+  );
+};
