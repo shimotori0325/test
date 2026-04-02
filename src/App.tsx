@@ -1,17 +1,18 @@
-import { useDispatch, useSelector } from "react-redux";
-import type { RootState, AppDispatch } from "./test/store";
-import { increment } from "./test/counterSlice";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import { Test } from "./test/Test";
+import { TestA } from "./test/TestA";
+import { TestB } from "./test/TestB";
 
 function App() {
 
-  const count = useSelector((state: RootState) => state.counter.value);
-  const dispatch = useDispatch<AppDispatch>();
-
   return (
-    <>
-      <p>{count}</p>
-      <button onClick={() => dispatch(increment())}>+</button>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Test />} />
+        <Route path="/testA" element={<TestA />} />
+        <Route path="/testB" element={<TestB />} />
+      </Routes>
+    </Router>
   )
 }
 
